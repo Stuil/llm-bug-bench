@@ -3,8 +3,276 @@
     "name": "LLM Bug Benchmark",
     "version": "1.0.0",
     "language": "Python",
-    "total_tasks": 0,
-    "generated_at": ""
+    "total_tasks": 20,
+    "generated_at": "2026-06-01T13:27:09.838031"
   },
-  "tasks": []
+  "tasks": [
+    {
+      "id": "001",
+      "category": "basic",
+      "title": "列表排序函数错误",
+      "description": "sort_list 函数的比较符号写反了，导致结果按降序排列而不是升序。",
+      "difficulty": "easy",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "冒泡排序",
+        "比较运算符"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "002",
+      "category": "basic",
+      "title": "JSON解析函数缺少空值处理",
+      "description": "parse_json 函数在传入空字符串时直接抛出异常，没有进行空值检查和异常处理。",
+      "difficulty": "easy",
+      "bug_type": "异常处理遗漏",
+      "knowledge_points": [
+        "JSON解析",
+        "异常处理"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "003",
+      "category": "basic",
+      "title": "斐波那契数列边界错误",
+      "description": "fibonacci 函数没有处理 n=0 的情况，导致输入 0 时返回错误结果。",
+      "difficulty": "easy",
+      "bug_type": "边界条件",
+      "knowledge_points": [
+        "递归/迭代",
+        "边界条件"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "004",
+      "category": "basic",
+      "title": "最大值函数初始值错误",
+      "description": "find_max 函数初始化 max_val 为 0，当输入列表全为负数时返回 0 而不是列表中的最大值。",
+      "difficulty": "easy",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "遍历",
+        "初始值"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "005",
+      "category": "basic",
+      "title": "字典合并函数可变默认参数错误",
+      "description": "merge_dicts 函数使用了可变默认参数 `updates={}`，多次调用时状态会累积，导致意外结果。",
+      "difficulty": "easy",
+      "bug_type": "类型误用",
+      "knowledge_points": [
+        "可变默认参数",
+        "Python陷阱"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "006",
+      "category": "basic",
+      "title": "文件读取函数缺少资源管理",
+      "description": "read_lines 函数打开文件后没有关闭，且没有处理文件不存在的情况。",
+      "difficulty": "easy",
+      "bug_type": "API误用",
+      "knowledge_points": [
+        "文件操作",
+        "资源管理"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "007",
+      "category": "basic",
+      "title": "回文判断函数边界条件错误",
+      "description": "is_palindrome 函数对空字符串返回 False（应为 True），且比较字符时的索引计算有误。",
+      "difficulty": "easy",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "字符串",
+        "回文",
+        "边界条件"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "008",
+      "category": "basic",
+      "title": "URL查询参数解析函数分隔符错误",
+      "description": "parse_query_string 使用 split('=') 解析参数，当值中包含 '=' 时会导致 ValueError。",
+      "difficulty": "easy",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "URL解析",
+        "字符串分割"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "009",
+      "category": "intermediate",
+      "title": "CSV解析函数缺少引号处理",
+      "description": "parse_csv 使用 split(',') 简单分割 CSV 行，没有处理引号内包含逗号的情况。",
+      "difficulty": "medium",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "CSV解析",
+        "字符串处理"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "010",
+      "category": "intermediate",
+      "title": "线程安全计数器缺少锁保护",
+      "description": "Counter 类的 increment 方法没有使用锁，多线程并发调用时可能导致计数丢失。",
+      "difficulty": "medium",
+      "bug_type": "并发/竞态",
+      "knowledge_points": [
+        "线程安全",
+        "锁"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "011",
+      "category": "intermediate",
+      "title": "邮箱验证正则过于宽松",
+      "description": "validate_email 的正则表达式只检查了 @ 符号是否存在，没有验证域名格式和 TLD。",
+      "difficulty": "medium",
+      "bug_type": "正则/字符串",
+      "knowledge_points": [
+        "正则表达式",
+        "输入验证"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "012",
+      "category": "intermediate",
+      "title": "二分查找循环条件错误",
+      "description": "binary_search 的循环条件是 left < right 而不是 left <= right，导致目标在最后一个索引时找不到。",
+      "difficulty": "medium",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "二分查找",
+        "边界条件"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "013",
+      "category": "intermediate",
+      "title": "LRU缓存淘汰策略错误",
+      "description": "LRUCache 的自定义实现中 get 方法的顺序更新逻辑有误，可能导致错误的淘汰行为。",
+      "difficulty": "medium",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "缓存",
+        "LRU算法"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "014",
+      "category": "intermediate",
+      "title": "限流器存在竞态条件",
+      "description": "RateLimiter 的 allow_request 方法在并发访问时存在竞态条件，可能允许超过限制的请求通过。",
+      "difficulty": "medium",
+      "bug_type": "并发/竞态",
+      "knowledge_points": [
+        "限流",
+        "竞态条件",
+        "线程安全"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "015",
+      "category": "intermediate",
+      "title": "日期解析函数格式支持不足",
+      "description": "parse_date 只支持连字符分隔的日期格式，不支持其他常见分隔符，且没有验证日期有效性。",
+      "difficulty": "medium",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "日期解析",
+        "格式处理"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "016",
+      "category": "intermediate",
+      "title": "HTML转义函数替换顺序错误",
+      "description": "escape_html 在替换 & 符号之前先替换了 < 和 >，导致已转义的实体被二次转义。",
+      "difficulty": "medium",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "HTML转义",
+        "字符串替换",
+        "顺序依赖"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "017",
+      "category": "advanced",
+      "title": "TCP回显服务器单次处理错误",
+      "description": "handle_client 函数读取一次数据后就关闭连接，没有循环监听后续请求，导致客户端只能发送一条消息。",
+      "difficulty": "hard",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "TCP网络编程",
+        "socket",
+        "循环处理"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "018",
+      "category": "advanced",
+      "title": "生产者消费者模式竞态条件",
+      "description": "Pipeline 的 consume 方法先检查队列是否为空再取值，存在竞态条件，可能永远阻塞或丢失数据。",
+      "difficulty": "hard",
+      "bug_type": "并发/竞态",
+      "knowledge_points": [
+        "生产者消费者",
+        "队列",
+        "竞态条件"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "019",
+      "category": "advanced",
+      "title": "二叉树中序遍历递归结果丢失",
+      "description": "inorder_traversal 函数的递归调用没有收集子树的遍历结果，只添加了根节点的值。",
+      "difficulty": "hard",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "二叉树",
+        "递归遍历",
+        "中序遍历"
+      ],
+      "source": "synthetic"
+    },
+    {
+      "id": "020",
+      "category": "advanced",
+      "title": "折扣计算精度问题",
+      "description": "calculate_discount 先对所有商品求和再打折，导致每件商品的折扣舍入误差被累积。",
+      "difficulty": "hard",
+      "bug_type": "逻辑错误",
+      "knowledge_points": [
+        "浮点数精度",
+        "Decimal",
+        "金融计算"
+      ],
+      "source": "synthetic"
+    }
+  ]
 }
