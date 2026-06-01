@@ -1,0 +1,10 @@
+{
+  "id": "014",
+  "category": "intermediate",
+  "title": "限流器存在竞态条件",
+  "description": "RateLimiter 的 allow_request 方法在并发访问时存在竞态条件，可能允许超过限制的请求通过。",
+  "difficulty": "medium",
+  "bug_type": "并发/竞态",
+  "knowledge_points": ["限流", "竞态条件", "线程安全"],
+  "source": "synthetic"
+}

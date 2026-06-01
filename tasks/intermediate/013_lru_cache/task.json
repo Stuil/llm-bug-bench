@@ -1,0 +1,10 @@
+{
+  "id": "013",
+  "category": "intermediate",
+  "title": "LRU缓存淘汰策略错误",
+  "description": "LRUCache 的自定义实现中 get 方法的顺序更新逻辑有误，可能导致错误的淘汰行为。",
+  "difficulty": "medium",
+  "bug_type": "逻辑错误",
+  "knowledge_points": ["缓存", "LRU算法"],
+  "source": "synthetic"
+}

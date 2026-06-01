@@ -1,0 +1,10 @@
+{
+  "id": "009",
+  "category": "intermediate",
+  "title": "CSV解析函数缺少引号处理",
+  "description": "parse_csv 使用 split(',') 简单分割 CSV 行，没有处理引号内包含逗号的情况。",
+  "difficulty": "medium",
+  "bug_type": "逻辑错误",
+  "knowledge_points": ["CSV解析", "字符串处理"],
+  "source": "synthetic"
+}

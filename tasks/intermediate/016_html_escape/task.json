@@ -1,0 +1,10 @@
+{
+  "id": "016",
+  "category": "intermediate",
+  "title": "HTML转义函数替换顺序错误",
+  "description": "escape_html 在替换 & 符号之前先替换了 < 和 >，导致已转义的实体被二次转义。",
+  "difficulty": "medium",
+  "bug_type": "逻辑错误",
+  "knowledge_points": ["HTML转义", "字符串替换", "顺序依赖"],
+  "source": "synthetic"
+}

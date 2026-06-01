@@ -1,0 +1,10 @@
+{
+  "id": "010",
+  "category": "intermediate",
+  "title": "线程安全计数器缺少锁保护",
+  "description": "Counter 类的 increment 方法没有使用锁，多线程并发调用时可能导致计数丢失。",
+  "difficulty": "medium",
+  "bug_type": "并发/竞态",
+  "knowledge_points": ["线程安全", "锁"],
+  "source": "synthetic"
+}

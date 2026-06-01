@@ -1,0 +1,10 @@
+{
+  "id": "011",
+  "category": "intermediate",
+  "title": "邮箱验证正则过于宽松",
+  "description": "validate_email 的正则表达式只检查了 @ 符号是否存在，没有验证域名格式和 TLD。",
+  "difficulty": "medium",
+  "bug_type": "正则/字符串",
+  "knowledge_points": ["正则表达式", "输入验证"],
+  "source": "synthetic"
+}
