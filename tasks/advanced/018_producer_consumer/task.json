@@ -1,0 +1,10 @@
+{
+  "id": "018",
+  "category": "advanced",
+  "title": "生产者消费者模式竞态条件",
+  "description": "Pipeline 的 consume 方法先检查队列是否为空再取值，存在竞态条件，可能永远阻塞或丢失数据。",
+  "difficulty": "hard",
+  "bug_type": "并发/竞态",
+  "knowledge_points": ["生产者消费者", "队列", "竞态条件"],
+  "source": "synthetic"
+}

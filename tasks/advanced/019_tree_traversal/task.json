@@ -1,0 +1,10 @@
+{
+  "id": "019",
+  "category": "advanced",
+  "title": "二叉树中序遍历递归结果丢失",
+  "description": "inorder_traversal 函数的递归调用没有收集子树的遍历结果，只添加了根节点的值。",
+  "difficulty": "hard",
+  "bug_type": "逻辑错误",
+  "knowledge_points": ["二叉树", "递归遍历", "中序遍历"],
+  "source": "synthetic"
+}

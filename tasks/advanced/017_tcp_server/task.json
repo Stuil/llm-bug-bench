@@ -1,0 +1,10 @@
+{
+  "id": "017",
+  "category": "advanced",
+  "title": "TCP回显服务器单次处理错误",
+  "description": "handle_client 函数读取一次数据后就关闭连接，没有循环监听后续请求，导致客户端只能发送一条消息。",
+  "difficulty": "hard",
+  "bug_type": "逻辑错误",
+  "knowledge_points": ["TCP网络编程", "socket", "循环处理"],
+  "source": "synthetic"
+}
