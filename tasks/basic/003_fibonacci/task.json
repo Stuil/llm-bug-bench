@@ -1,0 +1,10 @@
+{
+  "id": "003",
+  "category": "basic",
+  "title": "斐波那契数列边界错误",
+  "description": "fibonacci 函数没有处理 n=0 的情况，导致输入 0 时返回错误结果。",
+  "difficulty": "easy",
+  "bug_type": "边界条件",
+  "knowledge_points": ["递归/迭代", "边界条件"],
+  "source": "synthetic"
+}

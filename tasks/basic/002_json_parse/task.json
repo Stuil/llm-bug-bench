@@ -1,0 +1,10 @@
+{
+  "id": "002",
+  "category": "basic",
+  "title": "JSON解析函数缺少空值处理",
+  "description": "parse_json 函数在传入空字符串时直接抛出异常，没有进行空值检查和异常处理。",
+  "difficulty": "easy",
+  "bug_type": "异常处理遗漏",
+  "knowledge_points": ["JSON解析", "异常处理"],
+  "source": "synthetic"
+}

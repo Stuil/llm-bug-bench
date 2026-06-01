@@ -1,0 +1,10 @@
+{
+  "id": "008",
+  "category": "basic",
+  "title": "URL查询参数解析函数分隔符错误",
+  "description": "parse_query_string 使用 split('=') 解析参数，当值中包含 '=' 时会导致 ValueError。",
+  "difficulty": "easy",
+  "bug_type": "逻辑错误",
+  "knowledge_points": ["URL解析", "字符串分割"],
+  "source": "synthetic"
+}

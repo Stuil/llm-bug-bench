@@ -1,0 +1,10 @@
+{
+  "id": "005",
+  "category": "basic",
+  "title": "字典合并函数可变默认参数错误",
+  "description": "merge_dicts 函数使用了可变默认参数 `updates={}`，多次调用时状态会累积，导致意外结果。",
+  "difficulty": "easy",
+  "bug_type": "类型误用",
+  "knowledge_points": ["可变默认参数", "Python陷阱"],
+  "source": "synthetic"
+}

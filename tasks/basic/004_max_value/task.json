@@ -1,0 +1,10 @@
+{
+  "id": "004",
+  "category": "basic",
+  "title": "最大值函数初始值错误",
+  "description": "find_max 函数初始化 max_val 为 0，当输入列表全为负数时返回 0 而不是列表中的最大值。",
+  "difficulty": "easy",
+  "bug_type": "逻辑错误",
+  "knowledge_points": ["遍历", "初始值"],
+  "source": "synthetic"
+}
