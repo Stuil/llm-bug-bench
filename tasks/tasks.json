@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "name": "LLM Bug Benchmark",
+    "version": "1.0.0",
+    "language": "Python",
+    "total_tasks": 0,
+    "generated_at": ""
+  },
+  "tasks": []
+}
