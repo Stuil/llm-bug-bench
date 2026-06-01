@@ -5,6 +5,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from datetime import datetime
 
 TASKS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tasks")
 
@@ -101,7 +102,7 @@ def update_global_index():
     with open(index_path) as f:
         index = json.load(f)
     index["meta"]["total_tasks"] = len(tasks)
-    index["meta"]["generated_at"] = __import__("datetime").datetime.now().isoformat()
+    index["meta"]["generated_at"] = datetime.now().isoformat()
     index["tasks"] = sorted(tasks, key=lambda t: t["id"])
     with open(index_path, "w") as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
@@ -122,19 +123,19 @@ def main():
 
     print(f"Found {len(task_dirs)} tasks\n")
 
-    all_failed = False
+    any_failed = False
     for task_dir in task_dirs:
         task_id = os.path.basename(task_dir)
         errors = validate_task(task_dir)
         if errors:
-            all_failed = True
+            any_failed = True
             print(f"  FAIL: {task_id}")
             for e in errors:
                 print(f"    - {e}")
         else:
             print(f"  PASS: {task_id}")
 
-    if all_failed:
+    if any_failed:
         print("\nSome tasks failed validation!")
         sys.exit(1)
 
